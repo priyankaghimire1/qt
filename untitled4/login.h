@@ -8,7 +8,7 @@
 #include <QMessageBox>
 #include <QCoreApplication>
 #include "destination.h"
-#include "riderhome.h"
+
 
 namespace Ui {
 class login;
@@ -25,11 +25,13 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::login *ui;
     QSqlDatabase db;
     destination *destinationWindow;    // Add a member for the destination window
-    riderhome *riderhomewindow;
+
 };
 
 #endif // LOGIN_H

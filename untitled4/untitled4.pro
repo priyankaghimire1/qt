@@ -10,22 +10,28 @@ CONFIG += c++17
 
 SOURCES += \
     destination.cpp \
+    login_rider.cpp \
     main.cpp \
     login.cpp \
-    riderhome.cpp \
-    signup.cpp
+    rideaccepted.cpp \
+    signup.cpp \
+    viewrequests.cpp
 
 HEADERS += \
     destination.h \
     login.h \
-    riderhome.h \
-    signup.h
+    login_rider.h \
+    rideaccepted.h \
+    signup.h \
+    viewrequests.h
 
 FORMS += \
     destination.ui \
     login.ui \
-    riderhome.ui \
-    signup.ui
+    login_rider.ui \
+    rideaccepted.ui \
+    signup.ui \
+    viewrequests.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

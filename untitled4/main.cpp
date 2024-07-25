@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 
     QSqlDatabase db1;
     db1 =QSqlDatabase :: addDatabase ("QSQLITE");
-    db1.setDatabaseName("D:/Priyanka/Coding/qt/qt/database/db1.sqlite");
+    db1.setDatabaseName("D:/Priyanka/Coding/qt/qt/database/db.sqlite");
 
     if(!db1.open ()){
 
@@ -47,13 +47,25 @@ int main(int argc, char *argv[])
                      " RIDERID INTEGER PRIMARY KEY AUTOINCREMENT,"
                      "PHONENUMBER INTEGER NOT NULL,"
                      "PIN INTEGER NOT NULL);";
+    QString query2="CREATE TABLE IF NOT EXISTS acceptecRides("
+                     "RideID INTEGER PRIMARY KEY AUTOINCREMENT, "
+                     "UserID INTEGER, "
+                     "RiderID INTEGER, "
+                     "FOREIGN KEY(UserID) REFERENCES Users(USERID), "
+                     "FOREIGN KEY(RiderID) REFERENCES Riders(RIDERID));";
 
     QSqlQuery qry1;
+    QSqlQuery qry2;
     if(!qry1.exec (query1))
     {
         qDebug () << "error creating table";
     }
+    if(!qry2.exec (query2))
+    {
+        qDebug () << "error creating table";
+    }
     db1.close();
+
     qDebug () << "end";
     signup w;
     //login z;

@@ -9,7 +9,7 @@
 #include <QMessageBox>
 #include <QCoreApplication>
 #include "login.h"
-
+#include "login_rider.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -36,7 +36,8 @@ private slots:
 private:
     Ui::signup *ui;
     QSqlDatabase db;
-    login *loginwindow;
+    login *loginWindow;
+    login_rider *login_riderWindow;
 
 };
 #endif // SIGNUP_H
