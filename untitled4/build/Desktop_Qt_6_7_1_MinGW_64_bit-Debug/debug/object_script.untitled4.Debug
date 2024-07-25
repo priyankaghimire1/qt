@@ -1,0 +1,11 @@
+debug/destination.o
+debug/loginrider.o
+debug/main.o
+debug/login.o
+debug/riderhome.o
+debug/signup.o
+debug/moc_destination.o
+debug/moc_login.o
+debug/moc_loginrider.o
+debug/moc_riderhome.o
+debug/moc_signup.o
